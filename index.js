@@ -6,11 +6,14 @@ form.addEventListener("submit", async (e) => {
     // 1. stop the page from reloading instantly
     e.preventDefault();
 
+
+    // collecting all field
     const username = document.getElementById("username").value.trim();
     const email = document.getElementById("email").value.trim();
     const msgContent = document.getElementById("message").value.trim();
+    const phoneNo = document.getElementById("phone-no").value.trim();
 
-    if (!username || !email || !msgContent) {
+    if (!username && !email && !msgContent && !phoneNo) {
         alert("please fill in all fields");
     }
 
